@@ -1,0 +1,21 @@
+---
+title: "R Notebook"
+---
+This file converts the format of MOFA results from hdf5 to csv
+```{r setup}
+library(ggplot2)
+library(MOFA2)
+```
+
+```{r}
+model <- load_model("../data/drug/MOFA/mofa_30factor_frac1.0.hdf5")
+```
+
+```{r}
+plot_variance_explained(model, x="factor", y="view", groups = "group_0")
+```
+
+```{r}
+write.table(model@expectations$Z, "../data/drug/MOFA/mofa_30factor_frac1.0.csv", sep = ",", quote = F)
+```
+

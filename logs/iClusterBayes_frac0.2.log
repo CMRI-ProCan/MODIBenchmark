@@ -1,0 +1,10 @@
+$frac
+[1] 0.2
+
+$out
+[1] "data/drug/iCluster/iClusterBayes_frac0.2.csv"
+
+$help
+[1] FALSE
+
+Time difference of 1.071722 hours
